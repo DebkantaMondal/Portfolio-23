@@ -6,22 +6,16 @@ const mobileMenuOptions = document.getElementById("mobile-menu-options");
 const mobileMenuClose = document.getElementById("mobile-menu-close");
 //click event
 humburgElement.addEventListener('click', () => {
-    if (window.innerWidth <= 600) {
-        mobileMenuOptions.style.display = 'block';
-        mobileMenuOptions.classList.add("mobile-menu-screen");
-    } else {
-        mobileMenuOptions.style.display = 'none';
-        mobileMenuOptions.classList.remove("mobile-menu-screen");
-    }
+
+    mobileMenuOptions.style.display = 'block';
+    mobileMenuOptions.classList.add("mobile-menu-screen");
+
 })
 mobileMenuClose.addEventListener('click', () => {
-    if (window.innerWidth <= 600) {
-        mobileMenuOptions.style.display = 'none';
-        mobileMenuOptions.classList.remove("mobile-menu-screen");
-    } else {
-        mobileMenuOptions.style.display = 'none';
-        mobileMenuOptions.classList.remove("mobile-menu-screen");
-    }
+
+    mobileMenuOptions.style.display = 'none';
+    mobileMenuOptions.classList.remove("mobile-menu-screen");
+
 })
 
 //Weather Data Fetch
