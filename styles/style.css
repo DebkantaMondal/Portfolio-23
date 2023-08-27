@@ -520,19 +520,22 @@ a:hover {
         margin-bottom: 1.4rem;
         margin-left: 0;
         margin-right: 0;
-        font-size: var(--font-size-100);
-        padding-left: .6rem;
-        padding-right: .6rem;
-        font-family: var(--font-family-mixed);
-        background-color: var(--color-light-green-1);
-        color: var(--color-dark-green-1);
-        text-align: center;
-        padding-top: 4.4rem;
-        padding-bottom: .1rem;
         box-shadow: inset 0 0 0 0 var(--color-light-green-2);
         -webkit-transition: ease-out 1.2s;
         -moz-transition: ease-out 1.2s;
         transition: ease-out 1.2s;
+        padding-top: 4.4rem;
+        padding-bottom: .1rem;
+        background-color: var(--color-light-green-1);
+    }
+    .top-notification > p {
+        color: var(--color-mid-green-1);
+        font-size: var(--font-size-100);
+        padding-left: .6rem;
+        padding-right: .6rem;
+        font-family: var(--font-family-mixed);
+        text-align: center;
+        
     }
 
     .name {
