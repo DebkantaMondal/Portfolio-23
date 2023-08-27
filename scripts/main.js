@@ -17,25 +17,3 @@ mobileMenuClose.addEventListener('click', () => {
     mobileMenuOptions.classList.remove("mobile-menu-screen");
 
 })
-
-//Weather Data Fetch
-/*const url = `http://api.weatherstack.com/current?access_key=dd84379f24b00e2c03c04ec8de2a2a56&query=Basirhathttp://api.weatherstack.com/current?access_key=dd84379f24b00e2c03c04ec8de2a2a56&query=Basirhat`;
-
-let data = [];
-
-const weatherData = fetch(url)
-    .then(response => {
-        return response.json();
-    })
-    .then(result => {
-        return result;
-    })
-    .catch(error => {
-        console.log(error);
-        return error;
-    });
-
-
-weatherData.then(data => {data.push(data)})
-
-console.log(data);*/
