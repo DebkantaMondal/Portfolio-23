@@ -13,11 +13,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!--External Icons-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
 
     <div class="main-container">
+        <div class="top-navbar">
+            <ul>
+                <li>My Portfolio</li>
+            </ul>
+            <ul class="menu">
+                <li class="active">Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+            </ul>
+            <ul class="menu-mobile">
+                <li>
+                    <span class="material-symbols-outlined" id="humburg-icon">
+                        menu
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-menu-options" id="mobile-menu-options">
+            <ul class="top-header-menu">
+                <li>My Portfolio</li>
+                <li class="menu-close" id="mobile-menu-close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </li>
+            </ul>
+            <ul class="mobile-menus">
+                <div class="first-half">
+                    <li><a href="./index.html">Home</a></li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </div>
+                
+                <div class="second-half">
+                    
+                    <li class="welcome-menu">Welcome To My portfolio Site</li>
+                    <li class="lang-dropdown">
+                        <select name="lang-dd" id="lang-dd">
+                            <option value="en-in">English-India</option>
+                        </select>
+                    </li>
+                </div>
+            </ul>
+        </div>
         <div class="top-notification">
             <p>Desktop View Only For Now. Tablet and Mobile View Releasing Soon !!</p>
         </div>
