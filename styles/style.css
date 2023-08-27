@@ -22,6 +22,7 @@
     --font-weight-400: 400;
 
     --font-size-h1-dektop: 3.75rem;
+    --font-size-h2-desktop: 2.5rem;
     --font-size-p-desktop: 1.25rem;
     --font-size-100: 100%;
     --font-size-80: 80%;
@@ -239,6 +240,152 @@ body {
     font-size: var(--font-size-70);
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+a:hover {
+    color: var(--color-light-green-4);
+}
+
+.services {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 6rem;
+}
+
+.services>.service-name {
+    font-family: var(--font-family-mixed);
+    font-size: var(--font-size-h2-desktop);
+    font-weight: var(--font-weight-900);
+}
+
+.services>.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.services>.cards>.card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 20px 20px 20px 20px;
+    padding-bottom: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.services>.cards>.card>.card-image {
+    align-items: center;
+    width: 100%;
+    height: 200.9px;
+    border-radius: 20px 20px 0px 0px;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.services>.cards>.card>.service-desc {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: .3rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+}
+
+.services>.cards>.card>.service-desc-p {
+    font-family: var(--font-family-roboto);
+    font-size: var(--font-size-p-desktop);
+    font-weight: var(--font-weight-900);
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+.services> .cards > .card>.project-desc-p {
+    font-family: var(--font-family-roboto);
+    font-size: var(--font-size-h1-mobile);
+    font-weight: var(--font-weight-900);
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+.services>.cards>.card>.explore-btn {
+    width: 50%;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-900);
+    font-size: var(--font-size-100);
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--color-black);
+    letter-spacing: 0.03125rem;
+    margin-top: .8rem;
+    margin-left: 2rem;
+    margin-right: .8rem;
+    margin-bottom: .8rem;
+    padding-top: 0.6rem;
+    padding-left: 2rem;
+    padding-bottom: 0.6rem;
+    padding-right: 2rem;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+    background-color: var(--color-light-green-3);
+    border: 2px solid var(--color-dark-green-2);
+    box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+    -webkit-transition: ease-in .8s;
+    -moz-transition: ease-in .8s;
+    transition: ease-in .8s;
+}
+
+.services>.cards>.card>.explore-btn:hover {
+    box-shadow: inset 200px 0 0 0 var(--color-light-green-2);
+}
+
+.rotate-45 {
+    transform: rotate(-45deg);
+}
+
+.services>.cards>.card>.tech-used {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.tech-chip {
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-900);
+    font-size: var(--font-size-80);
+    line-height: .2rem;
+    text-align: center;
+    color: var(--color-light-green-4);
+    letter-spacing: 0.03125rem;
+    margin: .2rem;
+    padding-top: 0.6rem;
+    padding-left: .4rem;
+    padding-bottom: 0.6rem;
+    padding-right: .4rem;
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--color-light-green-4);
+    box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+    -webkit-transition: ease-in .8s;
+    -moz-transition: ease-in .8s;
+    transition: ease-in .8s;
+}
+
+.tech-chip:hover {
+    box-shadow: inset 70px 0 0 0 var(--color-light-green-3);
+    color: var(--color-dark-green-2);
+}
 
 /*Mobile Responsive CSS*/
 @media only screen and (max-width: 600px) {
@@ -335,30 +482,32 @@ body {
         margin-bottom: 2rem;
     }
 
-    
+
 
     .mobile-menu-screen>ul>.first-half>li {
         margin-bottom: 2rem;
         font-size: var(--font-size-h2-mobile);
     }
 
-    .mobile-menu-screen > ul > .first-half > li:hover {
+    .mobile-menu-screen>ul>.first-half>li:hover {
         color: var(--color-light-green-4);
         cursor: pointer;
     }
 
-    .mobile-menu-screen > .mobile-menus > .second-half > li {
+    .mobile-menu-screen>.mobile-menus>.second-half>li {
         margin-bottom: 3rem;
     }
 
     .mobile-menus {
         margin-left: 1.2rem;
     }
+
     .welcome-menu {
         font-family: var(--font-family-roboto);
         font-size: var(--font-size-100);
         font-weight: var(--font-weight-400);
     }
+
     .lang-dropdown {
         border: 0;
         font-family: var(--font-family-mixed);
@@ -514,6 +663,53 @@ body {
     .footer {
         position: relative;
     }
+
+    .services>.cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .services>.cards>.card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 20px 20px 20px 20px;
+        padding-bottom: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    .services>.cards>.card>.explore-btn {
+        width: 70%;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-900);
+        font-size: var(--font-size-100);
+        line-height: 1.5rem;
+        text-align: center;
+        color: var(--color-black);
+        letter-spacing: 0.03125rem;
+        margin-top: .8rem;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: .8rem;
+        padding-top: 0.6rem;
+        padding-left: 2rem;
+        padding-bottom: 0.6rem;
+        padding-right: 2rem;
+        border-radius: 25px 25px 25px 25px;
+        cursor: pointer;
+        background-color: var(--color-light-green-3);
+        border: 2px solid var(--color-dark-green-2);
+        box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+        -webkit-transition: ease-in .8s;
+        -moz-transition: ease-in .8s;
+        transition: ease-in .8s;
+    }
+    
 
     body::-webkit-scrollbar {
         width: 0em;
