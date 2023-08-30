@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./styles/style.css">
     </link>
 
+    <!--External Scripts Jquery-->
+    
+
     <!--External Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,55 +25,8 @@
 <body>
 
     <div class="main-container">
-        <div class="top-navbar">
-            <ul>
-                <li>My Portfolio</li>
-            </ul>
-            <ul class="menu">
-                <li class="active">Home</li>
-                <li>About</li>
-                <li><a href="./projects-services.html">Projects & Services</a></li>
-                <li>Contact</li>
-            </ul>
-            <ul class="menu-mobile">
-                <li>
-                    <span class="material-symbols-outlined" id="humburg-icon">
-                        menu
-                    </span>
-                </li>
-            </ul>
-        </div>
-        <div class="mobile-menu-options" id="mobile-menu-options">
-            <ul class="top-header-menu">
-                <li>My Portfolio</li>
-                <li class="menu-close" id="mobile-menu-close">
-                    <span class="material-symbols-outlined">
-                        close
-                    </span>
-                </li>
-            </ul>
-            <ul class="mobile-menus">
-                <div class="first-half">
-                    <li><a href="./index.html">Home</a></li>
-                    <li>About</li>
-                    <li><a href="./projects-services.html">Projects & Services</a></li>
-                    <li>Contact</li>
-                </div>
-                
-                <div class="second-half">
-                    
-                    <li class="welcome-menu">Welcome To My portfolio Site</li>
-                    <li class="lang-dropdown">
-                        <select name="lang-dd" id="lang-dd">
-                            <option value="en-in">English-India</option>
-                        </select>
-                    </li>
-                </div>
-            </ul>
-        </div>
-        <div class="top-notification">
-            <p>No Noifications Found !!</p>
-        </div>
+        <div id="nav-bar"></div>
+        <div id="top-bar"></div>
         <div class="flex-container">
             <div class="flex-intro">
                 <div class="intro-1">
@@ -103,13 +59,13 @@
                 <a href=""><button class="social-link">Quora</button></a>
             </div>
         </div>
-        <div class="footer">
-            <p>Designed & Maintained By Debkanta Mondal. Copyright 2023-24</p>
-        </div>
+        <div id="footer"></div>
     </div>
 
     <!--Scripts-->
+    <script src="./scripts/load.js"></script>
     <script src="./scripts/main.js"></script>
+
 </body>
 
 </html>
