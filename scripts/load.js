@@ -29,7 +29,7 @@ const navBar = '<div class="top-navbar">'+
 '<ul class="mobile-menus">'+
     '<div class="first-half">'+
         '<li><a href="./index.html">Home</a></li>'+
-        '<li><a href="./about.html">About</a>About</a></li>'+
+        '<li><a href="./about.html">About</a></li>'+
         '<li><a href="./projects-services.html">Projects & Services</a></li>'+
         '<li><a href="./contact.html">Contact</a></li>'+
     '</div>'+
