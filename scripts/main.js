@@ -1,4 +1,4 @@
-console.log('This is my Portfolio Site');
+console.log('Hi All! This is my Portfolio Site');
 
 //Navigation Bar Handling
 const humburgElement = document.getElementById("humburg-icon");
