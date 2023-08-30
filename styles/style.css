@@ -40,6 +40,12 @@ body {
     max-width: 100%;
 }
 
+.mentainance-text {
+    text-align: center;
+    font-size: var(--font-size-100);
+    font-family: var(--font-family-roboto);
+}
+
 .top-navbar {
     width: 100%;
     height: auto;

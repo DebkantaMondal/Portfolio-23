@@ -5,9 +5,9 @@ const navBar = '<div class="top-navbar">'+
 '</ul>'+
 '<ul class="menu" id="desktop-menu">'+
     '<li><a href="./index.html">Home</a></li>'+
-    '<li>About</li>'+
+    '<li><a href="./about.html">About</a></li>'+
     '<li><a href="./projects-services.html">Projects & Services</a></li>'+
-    '<li>Contact</li>'+
+    '<li><a href="./contact.html">Contact</a></li>'+
 '</ul>'+
 '<ul class="menu-mobile">'+
     '<li>'+
@@ -29,9 +29,9 @@ const navBar = '<div class="top-navbar">'+
 '<ul class="mobile-menus">'+
     '<div class="first-half">'+
         '<li><a href="./index.html">Home</a></li>'+
-        '<li>About</li>'+
+        '<li><a href="./about.html">About</a>About</a></li>'+
         '<li><a href="./projects-services.html">Projects & Services</a></li>'+
-        '<li>Contact</li>'+
+        '<li><a href="./contact.html">Contact</a></li>'+
     '</div>'+
     '<div class="second-half">'+
         '<li class="welcome-menu">Welcome To My portfolio Site</li>'+
