@@ -52,10 +52,15 @@ const footer = '<div class="footer">'+
 '<p>Designed & Maintained By Debkanta Mondal. Copyright 2023-24</p>'+
 '</div>';
 
+const mentainancePage = '<h1 class="mentainance-text">Page Under Mentainance</h1>';
+
 
 document.getElementById("nav-bar").innerHTML = navBar;
 document.getElementById("top-bar").innerHTML = topbar;
 document.getElementById("footer").innerHTML = footer;
+
+const pageMentainance = document.getElementById("page-mentainance");
+if(pageMentainance != null) pageMentainance.innerHTML = mentainancePage;
 
 
 
