@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 * {
     box-sizing: border-box;
 }
@@ -322,7 +324,7 @@ a:hover {
     letter-spacing: 2px;
 }
 
-.services> .cards > .card>.project-desc-p {
+.services>.cards>.card>.project-desc-p {
     font-family: var(--font-family-roboto);
     font-size: var(--font-size-h1-mobile);
     font-weight: var(--font-weight-900);
@@ -396,6 +398,90 @@ a:hover {
 .tech-chip:hover {
     box-shadow: inset 70px 0 0 0 var(--color-light-green-3);
     color: var(--color-dark-green-2);
+}
+
+
+.about-container {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 100%;
+}
+
+.accordion {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    cursor: pointer;
+    padding: 18px;
+    padding-left: 50px;
+    padding-right: 40px;
+    width: 90%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: var(--font-size-p-desktop);
+    font-family: var(--font-family-mixed);
+    -webkit-transition: ease-in .8s;
+    -moz-transition: ease-in .8s;
+    transition: ease-in .8s;
+    border-radius: 25px 25px;
+    box-shadow: inset 0 0 0 0 var(--color-white);
+    border: 3px solid var(--color-black);
+}
+
+.accor-active,
+.accordion:hover {
+    box-shadow: inset 1500px 0 0 0 var(--color-black);
+    color: var(--color-white);
+}
+
+.accordion:after {
+    font-family: "Material Icons";
+    content: "\e5cc";
+    color: var(--color-white);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accor-active:after {
+    font-family: "Material Icons";
+    content: "\e5cf";
+}
+
+.panel {
+    width: 90%;
+    padding: 10px 25px;
+    background-color: var(--color-white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: var(--font-size-100);
+    font-family: var(--font-family-roboto);
+    font-weight: var(--font-weight-900);
+}
+
+.contact-chip {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 4rem;
+}
+
+.contact-chip > span {
+    margin-right: 2rem;
+    padding: 10px;
+    -webkit-transition: ease-in .8s;
+    -moz-transition: ease-in .8s;
+    transition: ease-in .8s;
+}
+.contact-chip > span:hover {
+    border-radius: 50%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transform: rotate(-360deg);
 }
 
 /*Mobile Responsive CSS*/
@@ -539,14 +625,15 @@ a:hover {
         padding-bottom: .1rem;
         background-color: var(--color-light-green-1);
     }
-    .top-notification > p {
+
+    .top-notification>p {
         color: var(--color-mid-green-1);
         font-size: var(--font-size-100);
         padding-left: .6rem;
         padding-right: .6rem;
         font-family: var(--font-family-mixed);
         text-align: center;
-        
+
     }
 
     .name {
@@ -683,6 +770,7 @@ a:hover {
         margin-right: 1rem;
         margin-bottom: 4rem;
     }
+
     .services>.cards {
         display: flex;
         flex-direction: column;
@@ -690,6 +778,7 @@ a:hover {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .services>.cards>.card {
         display: flex;
         justify-content: space-between;
@@ -702,6 +791,7 @@ a:hover {
         padding-bottom: 1rem;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
+
     .services>.cards>.card>.explore-btn {
         width: 70%;
         font-family: var(--font-family-mixed);
@@ -728,7 +818,54 @@ a:hover {
         -moz-transition: ease-in .8s;
         transition: ease-in .8s;
     }
+
+    .about-container {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+        width: 100%;
+    }
+
+    .accordion {
+        background-color: var(--color-white);
+        color: var(--color-black);
+        cursor: pointer;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 30px;
+        width: 90%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: var(--font-size-h2-mobile);
+        font-family: var(--font-family-mixed);
+        -webkit-transition: ease-in .8s;
+        -moz-transition: ease-in .8s;
+        transition: ease-in .8s;
+        border-radius: 25px 25px;
+        box-shadow: inset 0 0 0 0 var(--color-white);
+        border: 2px solid var(--color-black);
+        text-align: center;
+    }
     
+    .accor-active,
+    .accordion:hover {
+        box-shadow: inset 650px 0 0 0 var(--color-black);
+        color: var(--color-white);
+    }
+
+    .panel {
+        width: 90%;
+        padding: 10px 25px;
+        background-color: var(--color-white);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        font-size: var(--font-size-100);
+        font-family: var(--font-family-roboto);
+        font-weight: var(--font-weight-400);
+        text-align: center;
+    }
+
 
     body::-webkit-scrollbar {
         width: 0em;
