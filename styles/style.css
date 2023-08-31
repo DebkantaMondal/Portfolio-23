@@ -415,7 +415,6 @@ a:hover {
     padding-left: 50px;
     padding-right: 40px;
     width: 90%;
-    border: none;
     text-align: left;
     outline: none;
     font-size: var(--font-size-p-desktop);
@@ -435,7 +434,6 @@ a:hover {
 }
 
 .accordion:after {
-    font-family: "Material Icons";
     content: "\e5cc";
     color: var(--color-white);
     font-weight: bold;
@@ -444,7 +442,6 @@ a:hover {
 }
 
 .accor-active:after {
-    font-family: "Material Icons";
     content: "\e5cf";
 }
 
@@ -833,8 +830,6 @@ a:hover {
         padding-left: 20px;
         padding-right: 30px;
         width: 90%;
-        border: none;
-        text-align: left;
         outline: none;
         font-size: var(--font-size-h2-mobile);
         font-family: var(--font-family-mixed);
