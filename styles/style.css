@@ -403,19 +403,20 @@ a:hover {
 
 
 .about-container {
-    margin-left: 4rem;
-    margin-right: 4rem;
-    width: 100%;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
 }
 
 .accordion {
     background-color: var(--color-white);
     color: var(--color-black);
     cursor: pointer;
-    padding: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     padding-left: 50px;
     padding-right: 40px;
-    width: 90%;
+    width: 100%;
     text-align: left;
     outline: none;
     font-size: var(--font-size-p-desktop);
@@ -448,7 +449,7 @@ a:hover {
 }
 
 .panel {
-    width: 90%;
+    width: 100%;
     padding: 10px 25px;
     background-color: var(--color-white);
     max-height: 0;
@@ -820,19 +821,20 @@ a:hover {
 
     .about-container {
         overflow-x: hidden;
-        margin-left: 1.2rem;
-        margin-right: 1.2rem;
-        width: 100%;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 96%;
     }
 
     .accordion {
         background-color: var(--color-white);
         color: var(--color-black);
         cursor: pointer;
-        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-left: 20px;
         padding-right: 30px;
-        width: 90%;
+        width: 98%;
         outline: none;
         font-size: var(--font-size-h2-mobile);
         font-family: var(--font-family-mixed);
@@ -852,7 +854,7 @@ a:hover {
     }
 
     .panel {
-        width: 90%;
+        width: 98%;
         padding: 10px 25px;
         background-color: var(--color-white);
         max-height: 0;

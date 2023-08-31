@@ -49,7 +49,7 @@ const topbar = '<div class="top-notification">'+
 '</div>';
 
 const footer = '<div class="footer">'+
-'<p>Designed & Maintained By Debkanta Mondal. Copyright 2023-24</p>'+
+'<p>Designed & Maintained By Debkanta Mondal. Copyright 2023-24&nbsp;&nbsp;<a href="./tnc.html">(Terms & Conditions | Privacy Policy)</a></p>'+
 '</div>';
 
 const mentainancePage = '<h1 class="mentainance-text">Page Under Mentainance</h1>';
