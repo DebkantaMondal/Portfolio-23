@@ -18,6 +18,7 @@
 
     --font-family-mixed: 'Android Euclid', 'Roboto', Helvetica, Arial, sans-serif;
     --font-family-roboto: 'Roboto', sans-serif;
+    --font-familty-material-icons: 'Material Icons';
 
     --font-weight-900: 900;
     --font-weight-600: 600;
@@ -434,7 +435,7 @@ a:hover {
 }
 
 .accordion:after {
-    font-family: "Material Icons";
+    font-family: var(--font-familty-material-icons);
     content: "\e5cc";
     color: var(--color-white);
     font-weight: bold;
