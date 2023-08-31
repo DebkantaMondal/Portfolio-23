@@ -819,6 +819,7 @@ a:hover {
     }
 
     .about-container {
+        overflow-x: hidden;
         margin-left: 1.2rem;
         margin-right: 1.2rem;
         width: 100%;
