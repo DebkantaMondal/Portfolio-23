@@ -434,6 +434,7 @@ a:hover {
 }
 
 .accordion:after {
+    font-family: "Material Icons";
     content: "\e5cc";
     color: var(--color-white);
     font-weight: bold;
