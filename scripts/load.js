@@ -6,6 +6,7 @@ const navBar = '<div class="top-navbar">'+
 '<ul class="menu" id="desktop-menu">'+
     '<li><a href="./index.html">Home</a></li>'+
     '<li><a href="./about.html">About</a></li>'+
+    '<li><a href="https://blog.debkantamondal.website/posts" target="_blank" rel="noopener noreferrer">Blog</a></li>'+
     '<li><a href="./projects-services.html">Projects & Services</a></li>'+
     '<li><a href="./contact.html">Contact</a></li>'+
 '</ul>'+
@@ -30,6 +31,7 @@ const navBar = '<div class="top-navbar">'+
     '<div class="first-half">'+
         '<li><a href="./index.html">Home</a></li>'+
         '<li><a href="./about.html">About</a></li>'+
+        '<li><a href="https://blog.debkantamondal.website/posts" target="_blank" rel="noopener noreferrer">Blog</a></li>'+
         '<li><a href="./projects-services.html">Projects & Services</a></li>'+
         '<li><a href="./contact.html">Contact</a></li>'+
     '</div>'+
