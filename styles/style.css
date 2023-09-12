@@ -35,6 +35,8 @@
     --font-size-h1-mobile: 2.5rem;
     --font-size-h2-mobile: 1.4rem;
     --font-size-p-mobile: 1.125rem;
+
+    --box-shadow-dark-deep: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 body {
@@ -509,7 +511,7 @@ a:hover {
         justify-content: space-between;
         align-items: center;
         backdrop-filter: saturate(180%) blur(5px);
-        background: hsla(0,0%,100%,.5);
+        background-color: hsla(0,0%,100%,.5);
 
     }
     .top-navbar>ul>li {
@@ -655,7 +657,7 @@ a:hover {
         border-bottom-right-radius: 15px;
         background-color: var(--color-light-green-1);
         cursor: pointer;
-        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        box-shadow: var(--box-shadow-dark-deep);
     }
 
     .top-notification>p {
