@@ -179,6 +179,8 @@ body {
 
 .contact-btn:hover {
     box-shadow: inset 0 70px 20px 0 var(--color-light-green-2);
+    color: var(--color-black);
+    font-weight: var(--font-weight-900);
 }
 
 .flex-container {
@@ -506,7 +508,12 @@ a:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        backdrop-filter: saturate(180%) blur(5px);
+        background: hsla(0,0%,100%,.5);
 
+    }
+    .top-navbar>ul>li {
+        border-bottom: none;
     }
 
     .top-navbar>.menu {
@@ -520,7 +527,6 @@ a:hover {
     .mobile-menu-screen {
         width: 100%;
         height: 100%;
-        background-color: var(--color-white);
         z-index: 3;
         position: fixed;
         display: flex;
@@ -536,6 +542,7 @@ a:hover {
         -webkit-transition: ease-out 1.8s;
         -moz-transition: ease-out 1.8s;
         transition: ease-out 1.8s;
+        background-color: var(--color-white);
     }
 
     .top-header-menu {
@@ -548,6 +555,20 @@ a:hover {
     .menu-close {
         text-align: right;
         cursor: pointer;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        border: 2px solid var(--color-black);
+        border-radius: 50%;
+        -webkit-transition: ease-in .3s;
+        -moz-transition: ease-in .3s;
+        transition: ease-in .3s;
+    }
+
+    .menu-close:hover {
+        border: 2px solid var(--color-white);
+        transform: rotate(90deg);
     }
 
     .mobile-menu-screen>ul {
@@ -570,13 +591,14 @@ a:hover {
 
     .second-half {
         position: absolute;
-        left: 0;
+        top: 80vh;
         bottom: 0;
-        margin-left: 2rem;
+        margin-left: 10%;
         margin-top: 2rem;
         padding-top: 2rem;
-        margin-right: 2rem;
+        margin-right: 10%;
         margin-bottom: 2rem;
+        width: 40%;
     }
 
 
@@ -605,8 +627,14 @@ a:hover {
         font-weight: var(--font-weight-400);
     }
 
-    .lang-dropdown {
-        border: 0;
+    .lang-dropdown > select{
+        width: 100%;
+        border: 2px solid var(--color-black);
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        border-radius: 25px;
         font-family: var(--font-family-mixed);
         font-size: var(--font-size-100);
         font-weight: var(--font-weight-900);
@@ -621,9 +649,13 @@ a:hover {
         -webkit-transition: ease-out 1.2s;
         -moz-transition: ease-out 1.2s;
         transition: ease-out 1.2s;
-        padding-top: 4.4rem;
+        padding-top: 4.8rem;
         padding-bottom: .1rem;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
         background-color: var(--color-light-green-1);
+        cursor: pointer;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
 
     .top-notification>p {
@@ -633,6 +665,7 @@ a:hover {
         padding-right: .6rem;
         font-family: var(--font-family-mixed);
         text-align: center;
+        font-weight: var(--font-weight-900);
 
     }
 

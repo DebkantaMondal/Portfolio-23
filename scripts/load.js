@@ -36,7 +36,7 @@ const navBar = '<div class="top-navbar">'+
         '<li><a href="./contact.html">Contact</a></li>'+
     '</div>'+
     '<div class="second-half">'+
-        '<li class="welcome-menu">Welcome To My portfolio Site</li>'+
+        '<!--<li class="welcome-menu">Welcome To My portfolio Site</li>-->'+
         '<li class="lang-dropdown">'+
             '<select name="lang-dd" id="lang-dd">'+
                 '<option value="en-in">English-India</option>'+
