@@ -8,12 +8,12 @@
     --color-white: #fff;
     --color-black: #000;
     --color-light-green-1: #bbebd4;
-    --color-light-green-2: #94f1d2;
-    --color-light-green-3: #53f1af;
-    --color-light-green-4: #16ce68;
-    --color-mid-green-1: #087238;
+    --color-light-green-2: #69f5af;
+    --color-light-green-3: hsla(118, 81%, 60%, 0.5);
+    --color-light-green-4: #48e48e;
+    --color-mid-green-1: #025c2a;
     --color-dark-green-1: #042211;
-    --color-dark-green-2: #16492d;
+    --color-dark-green-2: #16221b;
     --color-dark-green-3: #020a06;
 
     --font-family-mixed: 'Android Euclid', 'Roboto', Helvetica, Arial, sans-serif;
@@ -322,7 +322,7 @@ a:hover {
 }
 
 .services>.cards>.card>.service-desc-p {
-    font-family: var(--font-family-roboto);
+    font-family: var(--font-family-mixed);
     font-size: var(--font-size-p-desktop);
     font-weight: var(--font-weight-900);
     line-height: 32px;
@@ -365,7 +365,8 @@ a:hover {
 }
 
 .services>.cards>.card>.explore-btn:hover {
-    box-shadow: inset 200px 0 0 0 var(--color-light-green-2);
+    box-shadow: inset 240px 0 0 0 var(--color-white);
+    border: 2px solid var(--color-black);
 }
 
 .rotate-45 {
@@ -497,10 +498,9 @@ a:hover {
     .top-navbar {
         position: fixed;
         z-index: 2;
-        background-color: var(--color-white);
-        opacity: .7;
+        /*opacity: .7;*/
         width: 100%;
-        height: auto;
+        height: 4rem;
         padding-top: .2rem;
         padding-bottom: .2rem;
         padding-left: .1rem;
@@ -510,8 +510,9 @@ a:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        backdrop-filter: saturate(180%) blur(5px);
-        background-color: hsla(0,0%,100%,.5);
+        background-color: var(--color-white);
+        /*backdrop-filter: saturate(180%) blur(5px);
+        background-color: hsla(0,0%,100%,.5);*/
 
     }
     .top-navbar>ul>li {
@@ -558,19 +559,12 @@ a:hover {
     .menu-close {
         text-align: right;
         cursor: pointer;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
-        border: 2px solid var(--color-black);
-        border-radius: 50%;
         -webkit-transition: ease-in .3s;
         -moz-transition: ease-in .3s;
         transition: ease-in .3s;
     }
 
     .menu-close:hover {
-        border: 2px solid var(--color-white);
         transform: rotate(90deg);
     }
 
@@ -631,7 +625,7 @@ a:hover {
     }
 
     .lang-dropdown > select{
-        width: 100%;
+        width: 90%;
         border: 2px solid var(--color-black);
         padding-left: 2rem;
         padding-right: 2rem;
@@ -641,10 +635,13 @@ a:hover {
         font-family: var(--font-family-mixed);
         font-size: var(--font-size-100);
         font-weight: var(--font-weight-900);
+        transition: scale(1.15) translateY(-30px) 2.5s ease-in;
     }
 
     .top-notification {
-        margin-top: 0;
+        position: fixed;
+        width: 100%;
+        margin-top: 4rem;
         margin-bottom: 1.4rem;
         margin-left: 0;
         margin-right: 0;
@@ -652,12 +649,13 @@ a:hover {
         -webkit-transition: ease-out 1.2s;
         -moz-transition: ease-out 1.2s;
         transition: ease-out 1.2s;
-        padding-top: 4.8rem;
-        padding-bottom: .1rem;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        background-color: var(--color-light-green-1);
+        background-color: hsla(118, 81%, 60%, 0.5);
         cursor: pointer;
+        backdrop-filter: saturate(180%) blur(5px);
         box-shadow: var(--box-shadow-dark-deep);
     }
 
@@ -679,7 +677,7 @@ a:hover {
         line-height: 44px;
         color: var(--color-black);
         letter-spacing: -1px;
-        margin-top: -3rem;
+        margin-top: 0;
         margin-bottom: 38px;
         width: 100%;
     }
@@ -699,7 +697,8 @@ a:hover {
     .flex-container {
         display: flex;
         margin-left: 1.5rem;
-        margin-top: 3rem;
+        padding-top: 8rem;
+        margin-top: 0;
     }
 
     .flex-intro {
@@ -707,7 +706,6 @@ a:hover {
         justify-content: space-between;
         flex-direction: column-reverse;
         flex-wrap: wrap;
-
     }
 
     .intro-1 {
@@ -716,6 +714,9 @@ a:hover {
 
     .intro-2 {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .intro-2>.intro-2-links {
@@ -724,7 +725,7 @@ a:hover {
 
     .intro-2>.profile-photo {
         align-items: center;
-        width: 100%;
+        width: 80%;
         height: 70%;
         border-radius: 20px 20px 20px 20px;
         background-image: none;
@@ -734,6 +735,7 @@ a:hover {
     }
 
     .contact-btn {
+        width: 85vw;
         font-family: var(--font-family-mixed);
         font-weight: var(--font-weight-900);
         font-size: var(--font-size-100);
@@ -743,6 +745,8 @@ a:hover {
         letter-spacing: 0.03125rem;
         padding-top: 0.6rem;
         margin-bottom: 0.6rem;
+        margin-left: auto;
+        margin-right: auto;
         padding-left: 2rem;
         padding-bottom: 0.6rem;
         padding-right: 2rem;
@@ -801,6 +805,10 @@ a:hover {
         position: relative;
     }
 
+    .card-container{
+        padding-top: 8rem;
+    }
+
     .services {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -855,10 +863,15 @@ a:hover {
         transition: ease-in .8s;
     }
 
+    .services>.cards>.card>.explore-btn:hover{
+        color: var(--color-black);
+    }
+
     .about-container {
         overflow-x: hidden;
         margin-left: 3%;
         margin-right: 3%;
+        padding-top: 9rem;
         width: 96%;
     }
 
