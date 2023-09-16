@@ -1,5 +1,10 @@
 console.log('Hi All! This is my Portfolio Site');
 
+
+
+console.log(`${navigator.onLine ? 'Online' : 'Offline'}`);
+
+
 //Navigation Bar Handling
 const humburgElement = document.getElementById("humburg-icon");
 const mobileMenuOptions = document.getElementById("mobile-menu-options");
