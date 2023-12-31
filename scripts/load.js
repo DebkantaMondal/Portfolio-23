@@ -46,12 +46,23 @@ const navBar = '<div class="top-navbar">' +
     '</ul>' +
     '</div>';
 
+//Init of TopBar notification
+
+//default notification
+//const topbar = '<div class="top-notification">' +
+  //  '<p>No Notifications Found !!</p>' +
+    //'</div>';
+
+//New Year notification
 const topbar = '<div class="top-notification">' +
-    '<p>No Notifications Found !!</p>' +
+    '<p>☞ Wishing Everyone a <b>Very Happy New Year</b> for This <b>2024</b> 🥳</p>' +
     '</div>';
 
+
+//End of Topbar Block
+
 const footer = '<div class="footer">' +
-    '<p>Designed & Maintained By Debkanta Mondal. Copyright 2023-24&nbsp;&nbsp;<a href="./tnc.html">(Terms & Conditions | Privacy Policy)</a></p>' +
+    '<p>Designed & Maintained By Debkanta Mondal. Copyright 2024-2025&nbsp;&nbsp;<a href="./tnc.html">(Terms & Conditions | Privacy Policy)</a></p>' +
     '</div>';
 
 const mentainancePage = '<h1 class="mentainance-text">Page Under Mentainance</h1>';
