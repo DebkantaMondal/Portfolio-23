@@ -7,14 +7,16 @@
 :root {
     --color-white: #fff;
     --color-black: #000;
-    --color-light-green-1: #bbebd4;
-    --color-light-green-2: #69f5af;
-    --color-light-green-3: hsla(118, 81%, 60%, 0.5);
-    --color-light-green-4: #48e48e;
-    --color-mid-green-1: #025c2a;
-    --color-dark-green-1: #042211;
+    --color-light-green-1: #abeccd;
+    --color-light-green-2: #1acc9d;
+    --color-light-green-3: hsla(0, 0%, 0%, 0.5);
+    --color-light-green-4: #064724;
+    --color-mid-green-1: #1c6268;
+    --color-dark-green-1: #042122;
     --color-dark-green-2: #16221b;
     --color-dark-green-3: #020a06;
+    
+    --color-light-white-overlay: #dde3da;
 
     --font-family-mixed: 'Android Euclid', 'Roboto', Helvetica, Arial, sans-serif;
     --font-family-roboto: 'Roboto', sans-serif;
@@ -43,6 +45,7 @@ body {
     margin: 0;
     padding: 0;
     max-width: 100%;
+    letter-spacing: 0.09em;
 }
 
 .mentainance-text {
@@ -119,12 +122,12 @@ body {
     font-size: var(--font-size-100);
     padding: 0;
     font-family: var(--font-family-mixed);
-    background-color: var(--color-light-green-3);
-    color: var(--color-dark-green-1);
+    background-color: var(--color-black);
+    color: var(--color-white);
     text-align: center;
     padding-top: .7rem;
     padding-bottom: .7rem;
-    box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+    box-shadow: inset 0 0 0 0 var(--color-white);
     -webkit-transition: ease-out 1.2s;
     -moz-transition: ease-out 1.2s;
     transition: ease-out 1.2s;
@@ -132,7 +135,8 @@ body {
 }
 
 .top-notification:hover {
-    box-shadow: inset 1292px 0 0 0 var(--color-light-green-2);
+    box-shadow: inset 1800px 0 0 0 var(--color-light-white-overlay);
+    color: var(--color-black);
 }
 
 .name {
@@ -163,7 +167,7 @@ body {
     font-size: var(--font-size-100);
     line-height: 1.5rem;
     text-align: center;
-    color: var(--color-mid-green-1);
+    color: var(--color-white);
     letter-spacing: 0.03125rem;
     margin: .8rem;
     padding-top: 0.6rem;
@@ -172,16 +176,16 @@ body {
     padding-right: 2rem;
     border-radius: 25px 25px 25px 25px;
     cursor: pointer;
-    background-color: var(--color-white);
-    border: 2px solid var(--color-dark-green-2);
-    box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+    background-color: var(--color-black);
+    border: 2px solid var(--color-black);
+    box-shadow: inset 0 0 0 0 var(--color-light-white-overlay);
     -webkit-transition: ease-in .8s;
     -moz-transition: ease-in .8s;
     transition: ease-in .8s;
 }
 
 .contact-btn:hover {
-    box-shadow: inset 0 70px 20px 0 var(--color-light-green-2);
+    box-shadow: inset 300px 0px 0px 0 var(--color-light-white-overlay);
     color: var(--color-black);
     font-weight: var(--font-weight-900);
 }
@@ -236,7 +240,7 @@ body {
     font-size: var(--font-size-80);
     line-height: .2rem;
     text-align: center;
-    color: var(--color-dark-green-3);
+    color: var(--color-black);
     letter-spacing: 0.03125rem;
     margin: .2rem;
     padding-top: 0.6rem;
@@ -245,16 +249,17 @@ body {
     padding-right: .4rem;
     border-radius: 15px 15px 15px 15px;
     cursor: pointer;
-    background-color: var(--color-light-green-3);
-    border: 1px solid var(--color-light-green-4);
-    box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+    background-color: var(--color-light-white-overlay);
+    border: 1px solid var(--color-black);
+    box-shadow: inset 0 0 0 0 var(--color-black);
     -webkit-transition: ease-in .8s;
     -moz-transition: ease-in .8s;
     transition: ease-in .8s;
 }
 
 .social-link:hover {
-    box-shadow: inset 70px 0 0 0 var(--color-light-green-2);
+    box-shadow: inset 70px 0 0 0 var(--color-black);
+    color: var(--color-light-white-overlay);
 }
 
 .footer {
@@ -650,7 +655,7 @@ a:hover {
         margin-bottom: 1.4rem;
         margin-left: 0;
         margin-right: 0;
-        box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+        box-shadow: inset 0 0 0 0 var(--color-black);
         -webkit-transition: ease-out 1.2s;
         -moz-transition: ease-out 1.2s;
         transition: ease-out 1.2s;
@@ -658,14 +663,14 @@ a:hover {
         padding-bottom: .2rem;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        background-color: hsla(118, 81%, 60%, 0.5);
+        background-color: var(--color-black);
         cursor: pointer;
         backdrop-filter: saturate(180%) blur(5px);
         box-shadow: var(--box-shadow-dark-deep);
     }
 
     .top-notification>p {
-        color: var(--color-mid-green-1);
+        color: var(--color-white);
         font-size: var(--font-size-100);
         padding-left: .6rem;
         padding-right: .6rem;
