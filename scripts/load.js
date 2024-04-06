@@ -49,14 +49,14 @@ const navBar = '<div class="top-navbar">' +
 //Init of TopBar notification
 
 //default notification
-//const topbar = '<div class="top-notification">' +
-  //  '<p>No Notifications Found !!</p>' +
-    //'</div>';
+const topbar = '<div class="top-notification">' +
+    '<p>No Notifications Found !!</p>' +
+    '</div>';
 
 //New Year notification
-const topbar = '<div class="top-notification">' +
-    '<p>☞ Wishing Everyone a <b>Very Happy New Year</b> for This <b>2024</b> 🥳</p>' +
-    '</div>';
+//const topbar = '<div class="top-notification">' +
+  //  '<p>☞ Wishing Everyone a <b>Very Happy New Year</b> for This <b>2024</b> 🥳</p>' +
+    //'</div>';
 
 
 //End of Topbar Block
