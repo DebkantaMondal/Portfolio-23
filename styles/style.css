@@ -1238,14 +1238,14 @@ a:hover {
     
     .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-title {
         font-family: var(--font-family-mixed);
-        font-weight: var(--font-weight-900);
+        font-weight: var(--font-weight-400);
         font-size: var(--font-size-100);
         text-align: left;
         line-height: 1.5rem;
     }
     
     .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-title > strong {
-        font-size: var(--font-size-p-mobile);
+        font-size: var(--font-size-100);
         background-color: var(--color-light-green-1);
     }
     
@@ -1383,7 +1383,7 @@ a:hover {
     .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-improvements > ul > li {
         font-family: var(--font-family-mixed);
         font-weight: var(--font-weight-400);
-        font-size: var(--font-size-100);
+        font-size: var(--font-size-80);
         text-align: left;
         margin-bottom: 1rem;
     }
