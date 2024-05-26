@@ -1,11 +1,11 @@
 //Navbar load dynamically
 const navBar = '<div class="top-navbar">' +
     '<ul>' +
-    '<li>My Portfolio</li>' +
+    "<li>Debkanta's Portfolio</li>" +
     '</ul>' +
     '<ul class="menu" id="desktop-menu">' +
     '<li><a href="./index.html">Home</a></li>' +
-    '<li><a href="./about.html">About</a></li>' +
+    '<li><a href="#exp">About</a></li>' +
     '<li><a href="https://blog.debkantamondal.website/posts" target="_blank" rel="noopener noreferrer">Blog</a></li>' +
     '<li><a href="./projects-services.html">Projects & Services</a></li>' +
     '<li><a href="./contact.html">Contact</a></li>' +
@@ -20,7 +20,7 @@ const navBar = '<div class="top-navbar">' +
     '</div>' +
     '<div class="mobile-menu-options" id="mobile-menu-options">' +
     '<ul class="top-header-menu">' +
-    '<li>My Portfolio</li>' +
+    "<li>Debkanta's Portfolio</li>" +
     '<li class="menu-close" id="mobile-menu-close">' +
     '<span class="material-symbols-outlined">' +
     'close' +
@@ -50,7 +50,7 @@ const navBar = '<div class="top-navbar">' +
 
 //default notification
 const topbar = '<div class="top-notification">' +
-    '<p>No Notifications Found !!</p>' +
+    "<marquee behavior='alternate' direction='right'><p>No Notifications Found !!</p></marquee>" +
     '</div>';
 
 //New Year notification
