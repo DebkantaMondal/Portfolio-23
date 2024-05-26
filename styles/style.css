@@ -947,7 +947,7 @@ a:hover {
         margin-bottom: 1.4rem;
         margin-left: 0;
         margin-right: 0;
-        box-shadow: inset 0 0 0 0 var(--color-black);
+        box-shadow: inset 0 0 0 0 var(--color-light-olive-blue);
         -webkit-transition: ease-out 1.2s;
         -moz-transition: ease-out 1.2s;
         transition: ease-out 1.2s;
@@ -955,14 +955,14 @@ a:hover {
         padding-bottom: .2rem;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        background-color: var(--color-black);
+        background-color: var(--color-light-olive-blue);
         cursor: pointer;
         backdrop-filter: saturate(180%) blur(5px);
         box-shadow: var(--box-shadow-dark-deep);
     }
 
     .top-notification>p {
-        color: var(--color-white);
+        color: var(--colror-dark-blue);
         font-size: var(--font-size-100);
         padding-left: .6rem;
         padding-right: .6rem;
@@ -982,18 +982,20 @@ a:hover {
         margin-top: 0;
         margin-bottom: 38px;
         width: 100%;
+        text-align: center;
     }
 
     .desc {
-        font-family: var(--font-family-mixed);
+        font-family: var(--font-family-roboto);
         font-weight: var(--font-weight-400);
         font-size: var(--font-size-p-mobile);
         line-height: 26px;
         color: var(--color-black);
         letter-spacing: 0;
         margin-top: 0;
-        margin-bottom: 0 0 24px;
+        margin-bottom: 0 0 20px;
         width: 100%;
+        text-align: left;
     }
 
     .flex-container {
@@ -1029,7 +1031,7 @@ a:hover {
         align-items: center;
         width: 80%;
         height: 70%;
-        border-radius: 20px 20px 20px 20px;
+        border-radius: 20px 50px 40px 80px;
         background-image: none;
         background-position: center;
         background-repeat: no-repeat;
@@ -1043,7 +1045,7 @@ a:hover {
         font-size: var(--font-size-100);
         line-height: 1.5rem;
         text-align: center;
-        color: var(--color-mid-green-1);
+        color: var(--color-black);
         letter-spacing: 0.03125rem;
         padding-top: 0.6rem;
         margin-bottom: 0.6rem;
@@ -1054,9 +1056,9 @@ a:hover {
         padding-right: 2rem;
         border-radius: 25px 25px 25px 25px;
         cursor: pointer;
-        background-color: var(--color-white);
-        border: 2px solid var(--color-dark-green-2);
-        box-shadow: inset 0 0 0 0 var(--color-light-green-2);
+        background-color: var(--color-light-olive-red);
+        border: 2px solid var(--color-black);
+        box-shadow: inset 0 0 0 0 var(--color-light-olive-red);
         -webkit-transition: ease-in .8s;
         -moz-transition: ease-in .8s;
         transition: ease-in .8s;
@@ -1085,7 +1087,6 @@ a:hover {
         font-size: var(--font-size-80);
         line-height: .2rem;
         text-align: center;
-        color: var(--color-dark-green-3);
         letter-spacing: 0.03125rem;
         margin: 1.6rem;
         padding-top: 0.6rem;
@@ -1094,14 +1095,337 @@ a:hover {
         padding-right: .4rem;
         border-radius: 15px 15px 15px 15px;
         cursor: pointer;
-        background-color: var(--color-light-green-3);
-        border: 1px solid var(--color-light-green-4);
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        
 
         -webkit-transition: ease-in .8s;
         -moz-transition: ease-in .8s;
         transition: ease-in .8s;
     }
+
+    .github {
+        background-color: var(--color-light-olive-orange);
+        color: var(--color-black);
+        border: 1px solid var(--color-dark-orange);
+        box-shadow: inset 0 0 0 0 var(--color-light-white-overlay);
+        border-radius: 15px 5px 5px 5px;
+    }
+    
+    .linkedin {
+        background-color: var(--color-light-white-overlay);
+        color: var(--color-black);
+        border: 1px solid var(--colror-dark-blue);
+        box-shadow: inset 0 0 0 0 var(--color-light-white-overlay);
+        border-radius: 5px 15px 5px 5px;
+    }
+    
+    .cv {
+        border: 1px solid var(--color-black);
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .medium {
+        border: 1px solid var(--color-black);
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .leetcode {
+        background-color: var(--color-light-olive-yellow);
+        color: var(--color-black);
+        border: 1px solid var(--colror-dark-blue);
+        box-shadow: inset 0 0 0 0 var(--color-light-white-overlay);
+        border-radius: 5px 5px 15px 5px;
+    }
+    
+    .github:hover {
+        border: none;
+        box-shadow: inset 120px 0 0 0 var(--color-light-olive-yellow);
+    }
+    
+    .linkedin:hover {
+        box-shadow: inset 120px 0 0 0 var(--color-light-white-overlay);
+        color: var(--color-dark-blue);
+        border: none;
+    }
+    
+    .cv:hover {
+        box-shadow: inset 120px 0 0 0 var(--color-black);
+        color: var(--color-white);
+        border: none;
+    }
+
+    .medium:hover {
+        box-shadow: inset 120px 0 0 0 var(--color-black);
+        color: var(--color-white);
+        border: none;
+    }
+
+    .leetcode:hover {
+        box-shadow: inset 120px 0 0 0 var(--color-light-white-overlay);
+        color: var(--color-black);
+        border: none;
+    }
+
+    .myexp {
+        width: 100%;
+        height: auto;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        background-color: var(--color-white);
+    }
+    
+    .myexp > .exp-title {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 0;
+        padding-top: 8rem;
+        width: 100%;
+    }
+    
+    .myexp > .exp-title > .exp-main-title {
+        text-align: center;
+        font-family: var(--font-family-roboto);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-h1-mobile);
+        line-height: 45px;
+        color: var(--color-black);
+        letter-spacing: -1px;
+        margin-top: 0;
+        margin-bottom: 0px;
+        
+    }
+    
+    .myexp > .infosys-exp-card {
+        width: 100%;
+        height: auto;
+        background-color: var(--color-light-olive-yellow);
+        border-radius: 36px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    
+    .myexp > .infosys-exp-card > .exp-card-title {
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-p-desktop);
+        padding-left: .7rem;
+        padding-right: .7rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .myexp > .infosys-exp-card > .exp-card-timeline {
+        font-family: var(--font-family-roboto);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+        padding-right: 1.8rem;
+        text-align: center;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 {
+        margin-top: 1.2rem;
+        width: 100%;
+        height: auto;
+        background-color: var(--color-white);
+        border-radius: 0px 0px 36px 36px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: .5rem;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-title {
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-900);
+        font-size: var(--font-size-100);
+        text-align: left;
+        line-height: 1.5rem;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-title > strong {
+        font-size: var(--font-size-p-mobile);
+        background-color: var(--color-light-green-1);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips {
+        margin-top: 1.2rem;
+        padding-left: .4rem;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .dotnet-chip {
+        background-color: var(--color-light-olive-blue);
+        color: var(--colror-dark-blue);
+        border: 2px solid var(--colror-dark-blue);
+        border-radius: 25px 25px 15px 25px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .sql-db-chip {
+        background-color: var(--color-light-olive-yellow);
+        color: var(--color-black);
+        border: 2px solid var(--color-black);
+        border-radius: 25px 15px 25px 25px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .nosql-db-chip {
+        background-color: var(--color-light-green-1);
+        color: var(--color-light-green-4);
+        border: 2px solid var(--color-light-green-4);
+        border-radius: 15px 25px 25px 25px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .git-chip {
+        background-color: var(--color-light-olive-orange);
+        color: var(--color-black);
+        border: 2px solid var(--color-dark-orange);
+        border-radius: 25px 25px 15px 25px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .cloud-chip {
+        background-color: var(--color-light-olive-purple);
+        color: var(--color-dark-purple);
+        border: 2px solid var(--color-dark-purple);
+        border-radius: 25px 10px 15px 15px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .server-chip {
+        background-color: var(--color-light-olive-pink);
+        color: var(--color-dark-pink);
+        border: 2px solid var(--color-dark-pink);
+        border-radius: 25px 10px 15px 15px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .arch-chip {
+        background-color: var(--color-light-olive-red);
+        color: var(--color-dark-red);
+        border: 2px solid var(--color-dark-red);
+        border-radius: 15px 10px 15px 25px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .fe-chip {
+        background-color: var(--color-light-olive-grey);
+        color: var(--color-dark-grey);
+        border: 2px solid var(--color-black);
+        border-radius: 15px 10px 25px 10px;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        margin-top: .3rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-80);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-improvements {
+        margin-top: 1.2rem;
+        padding-left: .5rem;
+        padding-right: 1rem;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-improvements > ul > li {
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-size-100);
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-improvements > ul > li > strong {
+        background-color: var(--color-light-olive-yellow);
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .more-details-exp-section {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .more-details-exp-section > a > .more-exp-details-btn {
+        background-color: var(--color-black);
+        color: var(--color-light-green-1);
+        border: 1px solid var(--color-black);
+        border-radius: 50px 50px 50px 50px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-family: var(--font-family-mixed);
+        font-weight: var(--font-weight-900);
+        font-size: var(--font-size-100);
+        box-shadow: inset 0 0 0 0 var(--color-light-white-overlay);
+        cursor: pointer;
+        -webkit-transition: ease-in .8s;
+        -moz-transition: ease-in .8s;
+        transition: ease-in .8s;
+        float: center;
+    }
+    
+    .myexp > .infosys-exp-card > .inner-exp-card-1 > .more-details-exp-section > a > .more-exp-details-btn:hover {
+        box-shadow: inset 500px 0 0 0 var(--color-light-white-overlay);
+        color: var(--color-black);
+    }
+    
 
     .footer {
         position: relative;
