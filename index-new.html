@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Background Website</title>
+    <link rel="stylesheet" href="./styles/styles-new.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="./scripts/script-new.js"></script>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./assets/videos/cyclist-boy.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <!--Top Navigation Bar-->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Hi,🖐️</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">Experience</a>
+                <a href="#about">Projects</a>
+                <a href="tel:+918617582294">Contact</a>
+                <!-- <a href="#">Watch</a>
+                <a href="#">AirPods</a>
+                <a href="#">TV & Home</a>
+                <a href="#">Support</a> -->
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+    <div class="content">
+        <h1>Myself Debkanta Mondal.</h1>
+        <div class="about">
+            <ul>
+                <li>Software Engineer by Passion & Profession</li>
+                <li>Photographer & Cyclist by Passion</li>
+            </ul>
+        </div>
+        <!-- <button id="myBtn" onclick="myFunction()">Pause</button> -->
+        <div class="action-buttons">
+            <a href="#" class="btn primary">Explore Me</a>
+            <a href="#" class="btn secondary">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="myexp">
+        <div class="exp-title" id="exp">
+            <p class="exp-main-title">
+                My Experience Whatever I Acheived Till?
+            </p>
+        </div>
+        <div class="infosys-exp-card">
+            <div class="exp-card-title">
+                Digital Specialist Engineer at Infosys Ltd
+            </div>
+            <div class="exp-card-timeline">
+                ( Timeline : July, 2022 - Current )
+            </div>
+            <div class="inner-exp-card-1">
+                <!--clien1 exp-->
+                <div class="exp-1-title">
+                    1) Worked as <strong>Backend Developer</strong> for Sales Configurator
+                    Application of <strong>TKElevator</strong>
+                </div>
+                <div class="exp-1-tech-stack-chips">
+                    <button class="dotnet-chip">Dotnet 7</button>
+                    <button class="sql-db-chip">MS SQL Server</button>
+                    <button class="git-chip">Git</button>
+                    <button class="nosql-db-chip">Cosmo DB</button>
+                    <button class="cloud-chip">Azure</button>
+                    <button class="server-chip">IIS</button>
+                    <button class="arch-chip">Microservices</button>
+                </div>
+                <div class="exp-1-improvements">
+                    <ul>
+                        <li>Designed their <strong>SQL Quaries and Stored Procedures</strong>, improved
+                            <strong>Performance by 40%</strong>
+                        </li>
+                        <li>Developed and <strong>Optimized</strong> their <strong>Backend API Codes</strong>,
+                            improved overall <strong>Performance</strong> by <strong> 50%</strong> </li>
+                    </ul>
+
+                </div>
+                <!--client2 exp-->
+                <div class="exp-1-title">
+                    2) Worked as <strong>Full stack Developer</strong> for eDMU
+                    Application of <strong>Airbus</strong>
+                </div>
+                <div class="exp-1-tech-stack-chips">
+                    <button class="dotnet-chip">Dotnet Core 3</button>
+                    <button class="git-chip">Git</button>
+                    <button class="sql-db-chip">MS SQL Server</button>
+                    <button class="server-chip">IIS</button>
+                    <button class="fe-chip">Angular</button>
+                </div>
+                <div class="exp-1-improvements">
+                    <ul>
+                        <li>Optimized and Build their <strong>Backend APIs</strong> and <strong>Frontend
+                                App</strong>, improved <strong>Performance</strong> | Fixed some Major <strong>Bugs
+                                in Backend</strong> </li>
+
+                    </ul>
+
+                </div>
+
+                <!--More details Button-->
+                <div class="more-details-exp-section">
+                    <a href="./assets/docs/Debkanta_Mondal_Resume_Current.pdf"
+                        download="Resume-DebkantaMondal-2024-Latest">
+                        <button class="more-exp-details-btn">View Resume for More Details</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+    <script>
+        const toggle = document.querySelector('.toggle');
+        const menu = document.querySelector('.menu');
+        toggle.onclick = () => {
+            menu.classList.toggle('active');
+        };
+    </script>
+</body>
+
+</html>

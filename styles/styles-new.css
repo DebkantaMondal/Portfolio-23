@@ -1,0 +1,484 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size: 17px;
+  }
+
+  :root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-green-1: #abeccd;
+    --color-light-green-2: #1acc9d;
+    --color-light-green-3: hsla(0, 0%, 0%, 0.5);
+    --color-light-green-4: #064724;
+    --color-mid-green-1: #1c6268;
+    --color-dark-green-1: #042122;
+    --color-dark-green-2: #16221b;
+    --color-dark-green-3: #020a06;
+    --color-light-olive-green: #c2e8d4;
+    --color-light-olive-yellow: #fff5bc;
+    --color-light-olive-blue: #c7ddf4;
+    --color-light-olive-orange: #f1deca;
+    --color-light-olive-purple: #cfb9ea;
+    --color-light-olive-red: #f6bdbd;
+    --color-light-olive-pink: #ecbbf2;
+    --color-light-olive-grey: #e4e4e4;
+    --colror-dark-blue: #217eea;
+    --color-dark-orange: #f19160;
+    --color-dark-purple: #5b1198;
+    --color-dark-red: #9f2727;
+    --color-dark-pink: #e429db;
+    --color-dark-grey: #303030;
+    
+    --color-light-white-overlay: #dde3da;
+
+    --font-family-mixed: 'Android Euclid', 'Roboto', Helvetica, Arial, sans-serif;
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-familty-material-icons: 'Material Icons';
+
+    --font-weight-900: 900;
+    --font-weight-600: 600;
+    --font-weight-400: 400;
+
+    --font-size-h1-dektop: 3.75rem;
+    --font-size-h2-desktop: 2.5rem;
+    --font-size-p-desktop: 1.25rem;
+    --font-size-100: 100%;
+    --font-size-80: 80%;
+    --font-size-70: 70%;
+    --font-size-60: 60%;
+
+    --font-size-h1-mobile: 2.1rem;
+    --font-size-h2-mobile: 1.4rem;
+    --font-size-p-mobile: 1.125rem;
+
+    --box-shadow-dark-deep: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.navbar {
+  background: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.8rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #999;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
+  .content {
+    /* position: fixed;
+    top: 60px; */
+    position: relative;
+    top: 4px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .content h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  .about {
+    padding: 0 0 1.2rem 0;
+  }
+  
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .content ul {
+    list-style: none;
+    text-align: left;
+  }
+
+  .content ul li {
+    padding: 5px 0;
+  }
+
+
+  
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  .primary {
+    background: #443300;
+    color: #fff;
+    border: 1px dashed #fff;
+  }
+  
+  .primary:hover {
+    background: #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .secondary {
+    background: #292b2c;
+    color: #fff;
+    border: 1px solid #edeeef;
+  }
+  
+  .secondary:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .myexp {
+    position: relative;
+    /* background: rgba(0, 0, 0, 0.8);
+    color: #f1f1f1; */
+    width: 100%;
+    padding: 0px;
+    border-radius: 30px 30px 0 0;
+    margin-top: 22vh;
+  }
+
+
+  .myexp > .exp-title {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0;
+    padding-top: 8rem;
+    width: 100%;
+}
+
+.myexp > .exp-title > .exp-main-title {
+    text-align: center;
+    font-family: var(--font-family-roboto);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-h1-mobile);
+    line-height: 45px;
+    color: var(--color-white);
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    
+}
+
+.myexp > .infosys-exp-card {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-light-olive-yellow);
+    border-radius: 36px 36px 0 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.myexp > .infosys-exp-card > .exp-card-title {
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-p-desktop);
+    padding-left: .7rem;
+    padding-right: .7rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.myexp > .infosys-exp-card > .exp-card-timeline {
+    font-family: var(--font-family-roboto);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+    padding-right: 1.8rem;
+    text-align: center;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 {
+    margin-top: 1.2rem;
+    width: 100%;
+    height: auto;
+    background-color: var(--color-white);
+    border-radius: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-title {
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-100);
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-title > strong {
+    font-size: var(--font-size-100);
+    background-color: var(--color-light-green-1);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips {
+    margin-top: 1.2rem;
+    padding-left: .4rem;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .dotnet-chip {
+    background-color: var(--color-light-olive-blue);
+    color: var(--colror-dark-blue);
+    border: 2px solid var(--colror-dark-blue);
+    border-radius: 25px 25px 15px 25px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .sql-db-chip {
+    background-color: var(--color-light-olive-yellow);
+    color: var(--color-black);
+    border: 2px solid var(--color-black);
+    border-radius: 25px 15px 25px 25px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .nosql-db-chip {
+    background-color: var(--color-light-green-1);
+    color: var(--color-light-green-4);
+    border: 2px solid var(--color-light-green-4);
+    border-radius: 15px 25px 25px 25px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .git-chip {
+    background-color: var(--color-light-olive-orange);
+    color: var(--color-black);
+    border: 2px solid var(--color-dark-orange);
+    border-radius: 25px 25px 15px 25px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .cloud-chip {
+    background-color: var(--color-light-olive-purple);
+    color: var(--color-dark-purple);
+    border: 2px solid var(--color-dark-purple);
+    border-radius: 25px 10px 15px 15px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .server-chip {
+    background-color: var(--color-light-olive-pink);
+    color: var(--color-dark-pink);
+    border: 2px solid var(--color-dark-pink);
+    border-radius: 25px 10px 15px 15px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .arch-chip {
+    background-color: var(--color-light-olive-red);
+    color: var(--color-dark-red);
+    border: 2px solid var(--color-dark-red);
+    border-radius: 15px 10px 15px 25px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-tech-stack-chips > .fe-chip {
+    background-color: var(--color-light-olive-grey);
+    color: var(--color-dark-grey);
+    border: 2px solid var(--color-black);
+    border-radius: 15px 10px 25px 10px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    margin-top: .3rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-improvements {
+    margin-top: 1.2rem;
+    padding-left: .5rem;
+    padding-right: 1rem;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-improvements > ul > li {
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-80);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .exp-1-improvements > ul > li > strong {
+    background-color: var(--color-light-olive-yellow);
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .more-details-exp-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .more-details-exp-section > a > .more-exp-details-btn {
+    background-color: var(--color-black);
+    color: var(--color-light-green-1);
+    border: 1px solid var(--color-black);
+    border-radius: 50px 50px 50px 50px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-family: var(--font-family-mixed);
+    font-weight: var(--font-weight-900);
+    font-size: var(--font-size-100);
+    box-shadow: inset 0 0 0 0 var(--color-light-white-overlay);
+    cursor: pointer;
+    -webkit-transition: ease-in .8s;
+    -moz-transition: ease-in .8s;
+    transition: ease-in .8s;
+    float: center;
+}
+
+.myexp > .infosys-exp-card > .inner-exp-card-1 > .more-details-exp-section > a > .more-exp-details-btn:hover {
+    box-shadow: inset 500px 0 0 0 var(--color-light-white-overlay);
+    color: var(--color-black);
+}
