@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,7 +25,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='64' height='64'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230284c7' /%3E%3Cstop offset='100%25' stop-color='%237c3aed' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='url(%23bgGrad)' /%3E%3Ccircle cx='32' cy='32' r='28' fill='%230f172a' /%3E%3Ctext x='32' y='41' font-family='system-ui, -apple-system, sans-serif' font-weight='700' font-size='32' fill='%23ffffff' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='64' height='64'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2338bdf8' /%3E%3Cstop offset='50%25' stop-color='%23e879f9' /%3E%3Cstop offset='100%25' stop-color='%234ade80' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='url(%23bgGrad)' /%3E%3Ccircle cx='32' cy='32' r='28' fill='%23020617' /%3E%3Ctext x='32' y='41' font-family='system-ui, -apple-system, sans-serif' font-weight='700' font-size='32' fill='%23ffffff' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E"
     />
 
     <!-- Open Graph / Facebook -->
@@ -64,7 +64,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -72,7 +72,33 @@
     <link rel="preload" href="./styles/current-styles.css" as="style" />
     <link href="./styles/current-styles.css" rel="stylesheet" />
 
-    <!-- Structured Data (Schema.org for Person & Profile) -->
+    <!-- Synchronous Zero-Lag Theme Handler: Defaults to Light, Auto-switches via Time (6 PM - 6 AM Dark) unless Manual Override exists -->
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem("theme-override");
+          if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+          } else {
+            const d = new Date();
+            const utc = d.getTime() + d.getTimezoneOffset() * 60000;
+            const istDate = new Date(utc + 3600000 * 5.5);
+            const hour = istDate.getHours();
+
+            // Nighttime hours (6 PM to 6 AS) set to dark-dragon, otherwise light default
+            if (hour >= 18 || hour < 6) {
+              document.documentElement.setAttribute("data-theme", "dark-dragon");
+            } else {
+              document.documentElement.setAttribute("data-theme", "light");
+            }
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -100,22 +126,17 @@
       }
     </script>
 
-    <!-- PWA Web App Manifest for Offline Caching -->
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#0284c7" />
   </head>
   <body>
-    <!-- Service Worker Registration for Instant Offline Loading & Caching -->
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register("./sw.js")
             .then((registration) => {
-              console.log(
-                "ServiceWorker registration successful with scope: ",
-                registration.scope,
-              );
+              console.log("ServiceWorker registration successful");
             })
             .catch((error) => {
               console.log("ServiceWorker registration failed: ", error);
@@ -139,7 +160,43 @@
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
         </div>
+        <div class="nav-right">
+          <button
+            id="themeToggleBtn"
+            class="theme-toggle-btn"
+            aria-label="Toggle Theme"
+          >
+            <span id="themeIcon">☀️</span>
+            <span id="themeText">Theme</span>
+          </button>
+        </div>
       </nav>
+
+      <!-- Instant Zero-Lag Theme Switcher Script Handler -->
+      <script>
+        const btn = document.getElementById("themeToggleBtn");
+        const icon = document.getElementById("themeIcon");
+
+        function updateButtonUI() {
+          const currentTheme = document.documentElement.getAttribute("data-theme");
+          if (currentTheme === "light") {
+            icon.textContent = "☀️";
+          } else {
+            icon.textContent = "🌙";
+          }
+        }
+
+        updateButtonUI();
+
+        btn.addEventListener("click", () => {
+          const currentTheme = document.documentElement.getAttribute("data-theme");
+          const newTheme = currentTheme === "light" ? "dark-dragon" : "light";
+
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme-override", newTheme);
+          updateButtonUI();
+        });
+      </script>
 
       <header>
         <div class="hero-top">
@@ -170,11 +227,12 @@
           &gt; Backend &amp; Full-Stack Software Engineer
         </div>
         <p class="bio">
-          Engineering resilient enterprise architectures and distributed
-          services. Specializing in
-          <strong>.NET core performance optimization</strong>,
-          <strong>Angular scale apps</strong>, and
-          <strong>Azure cloud pipelines</strong> at Infosys.
+          <strong>4+ Years of Industry Experience on</strong> Scaling enterprise
+          systems for peak performance. Core expertise spans
+          <strong>.NET Core optimization</strong>,
+          <strong>large-scale Angular architecture</strong>, and
+          <strong>Azure cloud infrastructure</strong> at Infosys—transforming
+          sluggish workflows into lightning-fast experiences.
         </p>
         <div class="hero-actions">
           <a
@@ -232,11 +290,17 @@
       <section id="case-studies">
         <h2>My Work Experience &amp; Impact Stories</h2>
         <div class="metrics-grid">
-          <div class="metric-card" style="--m-color: var(--c-green)">
+          <div
+            class="metric-card horizontal-chip"
+            style="--m-color: var(--c-green)"
+          >
             <div class="metric-val">40%</div>
             <div class="metric-lbl">API Latency Drop</div>
           </div>
-          <div class="metric-card" style="--m-color: var(--c-orange)">
+          <div
+            class="metric-card horizontal-chip"
+            style="--m-color: var(--c-purple)"
+          >
             <div class="metric-val">50%</div>
             <div class="metric-lbl">Throughput Scale</div>
           </div>
@@ -255,9 +319,10 @@
           </div>
 
           <p class="story-narrative">
-            <strong>The Challenge:</strong> Under peak windows, the enterprise
-            configuration module suffered from long hours complex data
-            processing, severe thread contention and database timeout spikes.
+            <strong>The Challenge:</strong> During peak usage windows, the
+            enterprise configuration module suffered under massive data
+            processing overhead, severe thread contention, and frequent database
+            timeout spikes that degraded system responsiveness.
           </p>
 
           <div class="case-grid">
@@ -266,55 +331,55 @@
               <div class="case-box-body">
                 <ul>
                   <li>
-                    Used built in threads to process heavy processing jobs in
-                    background while keeping main thread free.
+                    Offloaded heavy computational workloads to background thread
+                    pools, maintaining main thread responsiveness.
                   </li>
                   <li>
-                    Replaced bottleneck heavy queries with compiled stored
-                    procedures &amp; covering indexes.
+                    Replaced unindexed queries with compiled stored procedures
+                    and targeted covering indexes.
                   </li>
                   <li>
-                    Implemented Redis for very frequent requests for redundant
-                    calculation avoidance.
+                    Integrated distributed Redis caching layers to bypass
+                    redundant calculations for frequent request payloads.
                   </li>
                 </ul>
               </div>
             </div>
 
             <div class="case-box tradeoff">
-              <div class="case-box-title">⚖️ Why This Path?</div>
+              <div class="case-box-title">⚖️ Architectural Rationale</div>
               <div class="case-box-body">
                 <ul>
                   <li>
-                    Keep User Experience and Application performance clean and
-                    Up always blocking for complex processing tasks.
+                    Prioritized uninterrupted user experience by decoupling
+                    blocking operations from request-response lifecycles.
                   </li>
                   <li>
-                    Database-layer tuning preserves strict ACID compliance
-                    without introducing cache-invalidation race conditions.
+                    Enforced database-level tuning to preserve strict
+                    transactional ACID compliance without cache race conditions.
                   </li>
                   <li>
-                    Most of our complex calculation's characteristics are coming
-                    redundant in nature, so used redis to get the output value
-                    of calculation as soon it detects redundant, so that it cuts
-                    off engaging threads for background calculation.
+                    Leveraged Redis output caching specifically for repetitive
+                    configuration patterns, drastically cutting thread wait
+                    times.
                   </li>
                 </ul>
               </div>
             </div>
 
             <div class="case-box metric">
-              <div class="case-box-title">📊 Measured Impact</div>
+              <div class="case-box-title">📊 Quantified Impact</div>
               <div class="case-box-body">
                 <ul>
                   <li>
-                    <strong>Tracked via:</strong> App Insights &amp; SQL
-                    Execution Plans.
+                    <strong>Validation:</strong> Verified via App Insights and
+                    SQL Execution Plan telemetry.
                   </li>
                   <li>
-                    <strong>Result:</strong> Latency dropped from ~340ms to
-                    ~190ms (<mark style="color: var(--c-cyan)">40% faster</mark
-                    >); throughput scaled
+                    <strong>Result:</strong> Average API latency dropped from
+                    ~340ms to ~190ms (<mark style="color: var(--c-cyan)"
+                      >40% faster</mark
+                    >); system throughput scaled by
                     <mark style="color: var(--c-green)">+50%</mark>.
                   </li>
                 </ul>
@@ -345,7 +410,10 @@
                 <span class="ongoing-badge">[Ongoing]</span>
               </div>
               <p class="project-desc">
-                Building a PR-review tool that flags stack-specific issues (missed ConfigureAwait, EF Core N+1 queries, Angular subscription leaks) via a custom rules engine + LLM
+                Building an automated PR-review intelligence tool that flags
+                stack-specific performance anti-patterns (missed ConfigureAwait,
+                EF Core N+1 queries, Angular subscription memory leaks) using a
+                custom rule engine paired with LLM insights.
               </p>
             </div>
             <div class="project-tech">.NET 8 &bull; Azure &bull; Angular</div>
